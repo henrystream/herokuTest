@@ -1,8 +1,9 @@
+
 var http=require('http');
 var fs=require('fs');
 
 
-
+const port = process.env.PORT || 3000;
 //myReadStream.on('data',function(chunk){
   //  console.log('New chunk received');
     //console.log(chunk);
@@ -27,5 +28,5 @@ var server=http.createServer((req,res)=>{
     }
 });
 
-server.listen(3000,'127.0.0.1');
-console.log('Listening on port 3000');
+server.listen(port);
+console.log(`Listening on port ${port}`);
