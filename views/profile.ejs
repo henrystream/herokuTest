@@ -1,0 +1,29 @@
+<!Doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <style>
+    body{background: skyblue;font-family: verdana;color:#fff;padding: 30px;}
+  h1{font-size: 48px;text-transform: uppercase;letter-spacing: 2px;text-align: center}
+    p{font-size: 16px;text-align: center}
+    </style>
+    <script src="main.js"></script>
+</head>
+<body>
+    <%include partials/nav.ejs %>
+    <h1>Welcome the request id is:<%=person %></h1>
+    <p><strong>Age:</strong><%=data.age %><br/>
+        <strong>Job:</strong><%=data.job %>
+    </p>
+    <ul>
+        <% data.hobbies.forEach(function(item){%>
+        <li><%=item %></li>
+        <% });%>
+    </ul>
+    <p><%=qs.dept%></p>
+</body>
+</html>
